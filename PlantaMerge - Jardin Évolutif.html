@@ -1,0 +1,1040 @@
+<html lang="fr"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjEyNDIwNWRjNjYzMGQwMGYzOWIxODY4ZDRmYWI3NTc1N2Y0ZGI0OTAiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwNjIxMTU5MzQ0MDIwMjQzMzcxNSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzYyN2U2NzRlNDQxMDU3YzlfcGxhbnRhbWVyZ2UuaHRtbC00NjMifSwiZXhwIjoxNzY3MjkxNTI1LCJpYXQiOjE3NjcyODc5MjUsImFsZyI6IlJTMjU2In0.ew7HwUtWNsM3CDGNG0sQd97TUq56ZWRPY7kCp0OZnrIqM5xzIpgLIEjj6SO9Dl--5-1tAn3oWGI0MdvlJdUhJgV6CpWrbta1jyagXQEDbG0mnr5WV-iu-aeSsddCS0L5pcrU7sAr5TW0q8PYo3UGNxOkaO0YLmheCRiTZRpCFHf_Swvra7p4tEz0ghkB7GM2JFfcT_u-uWhgTVq_4LibSr7eqdUacNdMHMu5i8_8StC19HwA2Z3MqoPZIBNP8vh1wOmgzCiJ-R42X9Yhu2_d-iGQ4uvFNGhRplqsOhWJ1KMOTDTvSWuPAhfIys_FenVE7Rb93mntyeqmu9uBnoRpIg","c_627e674e441057c9_plantamerge.html-463")</script><script>'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){const d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);const c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{let a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){const b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{const c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){const c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{const c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){const c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);const e=yield c.blob();return new Promise((f,g)=>{const k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){let c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){const c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());let e;try{const f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){const b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");const c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;let c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){const c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{let g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){const g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){const b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{const e=d?(new URL(b,d||void 0)).toString():b;let f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){const [c,,e]=ia.exec(d)||[],f=c,g=e;if(!g)return"";if(g===b)return`src: ${f};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;const c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c;const e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){const d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){const d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){let d=a.cssText;const c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){let g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];const b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){const d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){const g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}const d=new Set;b(a);return d}function ua(a,b){return t(function*(){const d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){const d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){const c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b);var e=yield wa(a,b);e=yield B(e);const f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=
+16384));f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;const c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){const a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){let b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){const b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PlantaMerge - Jardin Évolutif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+        :root {
+            --sky-top: #7dd3fc;
+            --sky-bottom: #38bdf8;
+            --ambient-overlay: rgba(255, 255, 255, 0);
+            --grass-mesh: radial-gradient(circle at 50% 50%, #2ecc71 0%, #27ae60 100%);
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            height: 100dvh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 100%);
+            transition: background 4s ease;
+            touch-action: none;
+        }
+
+        .atmosphere {
+            position: fixed;
+            inset: 0;
+            background: var(--ambient-overlay);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .app-wrapper {
+            width: 100%;
+            max-width: 440px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.4);
+            flex-shrink: 0;
+        }
+
+        .garden-area {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 10px;
+            width: 100%;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center center;
+            transform: rotateX(10deg);
+        }
+
+        .cell {
+            aspect-ratio: 1;
+            background: var(--grass-mesh);
+            border-radius: 18px;
+            position: relative;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1), inset 0 -4px 0 rgba(0,0,0,0.1);
+            cursor: grab;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .cell.drag-over {
+            filter: brightness(1.2);
+            transform: scale(1.05);
+            border-color: white;
+        }
+
+        .dragging-image {
+            width: 80px;
+            height: 80px;
+            position: fixed;
+            top: -1000px; 
+            z-index: 9999;
+            pointer-events: none;
+            display: none;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+            transition: transform 0.1s ease-out;
+        }
+
+        .plant-container {
+            width: 85%;
+            height: 85%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            pointer-events: none;
+        }
+
+        .plant-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 6px 4px rgba(0,0,0,0.2));
+            animation: sway 5s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg) scale(1.05); }
+        }
+
+        .mystery-container {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s;
+            margin: 0 5px;
+            flex-shrink: 0;
+        }
+        
+        .mystery-container:active { transform: scale(0.9); }
+        
+        .box-svg {
+            width: 70px;
+            height: 70px;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+        }
+
+        .progress-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-90deg);
+        }
+        
+        .progress-ring__circle {
+            transition: stroke-dashoffset 0.1s linear;
+            stroke: #fbbf24;
+            stroke-linecap: round;
+        }
+
+        .action-bar {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgba(255, 255, 255, 1);
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.05);
+            margin-top: 10px;
+            flex-shrink: 0;
+            z-index: 100;
+        }
+
+        #shop-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .shop-content {
+            background: white;
+            width: 100%;
+            max-width: 400px;
+            max-height: 80vh;
+            border-radius: 35px;
+            padding: 25px;
+            overflow-y: auto;
+        }
+
+        .shop-item {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .day { --sky-top: #7dd3fc; --sky-bottom: #38bdf8; }
+        .sunset { --sky-top: #fb923c; --sky-bottom: #4338ca; }
+        .night { --sky-top: #0f172a; --sky-bottom: #1e293b; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.-bottom-1{bottom:-0.25rem}.left-1\/2{left:50%}.top-10{top:2.5rem}.z-\[3000\]{z-index:3000}.mb-1{margin-bottom:0.25rem}.mb-3{margin-bottom:0.75rem}.mb-6{margin-bottom:1.5rem}.mt-2{margin-top:0.5rem}.block{display:block}.flex{display:flex}.h-1{height:0.25rem}.h-10{height:2.5rem}.h-full{height:100%}.w-10{width:2.5rem}.w-16{width:4rem}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-amber-400{--tw-border-opacity:1;border-color:rgb(251 191 36 / var(--tw-border-opacity, 1))}.border-blue-400{--tw-border-opacity:1;border-color:rgb(96 165 250 / var(--tw-border-opacity, 1))}.border-green-500{--tw-border-opacity:1;border-color:rgb(34 197 94 / var(--tw-border-opacity, 1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/50{background-color:rgb(255 255 255 / 0.5)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.p-2{padding:0.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[8px\]{font-size:8px}.text-\[9px\]{font-size:9px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-black{font-weight:900}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tracking-tighter{letter-spacing:-0.05em}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-green-900{--tw-text-opacity:1;color:rgb(20 83 45 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-700{transition-duration:700ms}.active\:scale-90:active{--tw-scale-x:.9;--tw-scale-y:.9;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}</style></head>
+<body class="sunset" onclick="initAudio()">
+
+    <div class="atmosphere"></div>
+
+    <div id="shop-modal">
+        <div class="shop-content">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-black text-green-800 italic">Pépinière Royale</h2>
+                <button onclick="toggleShop()" class="text-gray-400 font-bold text-xl">✕</button>
+            </div>
+            <div id="shop-list"></div>
+        </div>
+    </div>
+
+    <!-- Le fantôme pour le drag & drop -->
+    <div id="drag-ghost" class="dragging-image"></div>
+
+    <div class="app-wrapper">
+        <div class="glass-header">
+            <div class="flex justify-between items-start mb-3">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center shadow-inner text-xl">🌿</div>
+                    <div>
+                        <h1 class="font-bold text-gray-800 text-sm">PlantaMerge</h1>
+                        <p id="cycle-label" class="text-[8px] font-black text-green-600 uppercase tracking-tighter">Crépuscule</p>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button id="audio-btn" onclick="toggleAudio()" title="Son" class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md border-2 border-amber-400 active:scale-90 transition-transform">🔇</button>
+                    <button onclick="toggleShop()" title="Boutique" class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md border-2 border-green-500 active:scale-90 transition-transform">🛒</button>
+                    <button id="save-btn" onclick="downloadAndSave()" oncontextmenu="resetSave(event)" title="Sauvegarder / Clic droit pour Reset" class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md border-2 border-blue-400 active:scale-90 transition-transform">💾</button>
+                </div>
+            </div>
+            
+            <div class="flex justify-between items-center bg-white/50 p-2 rounded-xl border border-white">
+                <div class="flex items-center gap-2">
+                    <span class="text-lg">🪙</span>
+                    <span id="coins-val" class="text-md font-black text-gray-800">100</span>
+                </div>
+                <div class="text-right">
+                    <span class="text-[9px] font-bold text-gray-400 uppercase">Sagesse</span>
+                    <div id="lvl-txt" class="text-md font-black text-green-700">1</div>
+                </div>
+            </div>
+
+            <div class="mt-2">
+                <div class="h-1 bg-gray-200 rounded-full overflow-hidden">
+                    <div id="xp-bar" class="h-full bg-green-500 transition-all duration-700" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="garden-area">
+            <div id="grid" style="transform: scale(0.9) rotateX(10deg); grid-template-columns: repeat(3, 1fr);"><div class="cell" data-index="0"></div><div class="cell" data-index="1"></div><div class="cell" data-index="2"></div><div class="cell" data-index="3"></div><div class="cell" data-index="4"></div><div class="cell" data-index="5"></div></div>
+        </div>
+
+        <div class="action-bar">
+            <button onclick="toggleTrash()" id="trash-btn" class="w-16 text-center font-bold text-[9px] uppercase text-gray-500">
+                <span class="text-lg block mb-1">✂️</span>
+                Nettoyer
+            </button>
+
+            <div class="mystery-container" onclick="clickBox()">
+                <svg class="progress-ring" width="90" height="90">
+                    <circle class="progress-ring__circle" stroke-width="4" stroke="rgba(0,0,0,0.05)" fill="transparent" r="40" cx="45" cy="45"></circle>
+                    <circle id="box-circle" class="progress-ring__circle" stroke-width="4" fill="transparent" r="40" cx="45" cy="45" style="stroke-dasharray: 251.32; stroke-dashoffset: 153.305;"></circle>
+                </svg>
+                <div class="box-svg">
+                    <svg viewBox="0 0 100 100">
+                        <rect x="20" y="40" width="60" height="45" rx="5" fill="#f59e0b"></rect>
+                        <rect x="15" y="30" width="70" height="15" rx="5" fill="#fbbf24"></rect>
+                        <rect x="45" y="30" width="10" height="55" fill="#ef4444"></rect>
+                        <path d="M50 30 C30 10 10 30 50 30 C90 30 70 10 50 30" fill="none" stroke="#ef4444" stroke-width="6"></path>
+                        <text x="50" y="65" font-size="20" text-anchor="middle" fill="white" font-weight="bold">?</text>
+                    </svg>
+                </div>
+                <span id="box-timer" class="absolute -bottom-1 bg-amber-500 text-white text-[8px] px-2 py-0.5 rounded-full font-black shadow-md">7s</span>
+            </div>
+
+            <div class="w-16 text-center font-bold text-[9px] uppercase text-green-700">
+                <span class="text-lg block mb-1">🏡</span>
+                <span id="slots-count">6</span> places
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="fixed top-10 left-1/2 -translate-x-1/2 bg-white/95 px-8 py-3 rounded-full shadow-2xl opacity-0 transition-all font-bold text-green-900 z-[3000] text-sm pointer-events-none">...</div>
+
+    <script>
+        const SAVE_KEY = 'plantamerge_standalone_v1';
+        let state = {
+            coins: 100,
+            xp: 0,
+            level: 1,
+            gridSlots: 6,
+            grid: Array(6).fill(null),
+            discoveredLevel: 0
+        };
+
+        function loadSave() {
+            const saved = localStorage.getItem(SAVE_KEY);
+            if (saved) {
+                try { 
+                    const parsed = JSON.parse(saved);
+                    state = { ...state, ...parsed };
+                    if (state.grid.length < state.gridSlots) {
+                        state.grid = state.grid.concat(Array(state.gridSlots - state.grid.length).fill(null));
+                    }
+                } catch(e) { console.error("Save error"); }
+            }
+        }
+
+        function persist() {
+            localStorage.setItem(SAVE_KEY, JSON.stringify(state));
+        }
+
+        function resetSave(e) {
+            e.preventDefault();
+            if(confirm("Réinitialiser tout le jardin ?")) {
+                localStorage.removeItem(SAVE_KEY);
+                location.reload();
+            }
+        }
+
+        let audioCtx = null;
+        let isMuted = true;
+
+        function initAudio() {
+            if (audioCtx) return;
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+
+        function playSound(f, type='sine', dur=0.2, vol=0.05) {
+            if (!audioCtx || isMuted) return;
+            const osc = audioCtx.createOscillator();
+            const g = audioCtx.createGain();
+            osc.type = type;
+            osc.frequency.setValueAtTime(f, audioCtx.currentTime);
+            g.gain.setValueAtTime(vol, audioCtx.currentTime);
+            g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
+            osc.connect(g);
+            g.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + dur);
+        }
+
+        function toggleAudio() {
+            initAudio();
+            isMuted = !isMuted;
+            document.getElementById('audio-btn').innerText = isMuted ? '🔇' : '🔊';
+        }
+
+        const PLANT_SVGS = [
+            `<svg class="plant-svg" viewBox="0 0 100 100"><circle cx="50" cy="80" r="5" fill="#4a3728"/><path d="M50 80 Q50 60 50 50" stroke="#2ecc71" stroke-width="3" fill="none"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 60" stroke="#4a3728" stroke-width="3"/><path d="M50 60 Q70 40 50 30 Q30 40 50 60" fill="#2ecc71"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 50" stroke="#4a3728" stroke-width="4"/><circle cx="50" cy="40" r="10" fill="#2ecc71"/><circle cx="50" cy="55" r="8" fill="#27ae60"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 60" stroke="#4a3728" stroke-width="4"/><path d="M50 60 L30 40 L50 20 L70 40 Z" fill="#2ecc71"/><circle cx="50" cy="40" r="5" fill="#f1c40f"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 50" stroke="#4a3728" stroke-width="4"/><circle cx="50" cy="40" r="20" fill="#f1c40f"/><circle cx="50" cy="40" r="10" fill="#e67e22"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 70" stroke="#4a3728" stroke-width="8"/><path d="M30 70 L70 70 L50 30 Z" fill="#e74c3c"/><circle cx="50" cy="50" r="3" fill="white"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 40" stroke="#5d4037" stroke-width="6"/><path d="M50 10 L30 50 L70 50 Z" fill="#1b5e20"/><path d="M50 25 L35 55 L65 55 Z" fill="#2ecc71"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 60" stroke="#5d4037" stroke-width="8"/><circle cx="50" cy="40" r="25" fill="#2ecc71"/><circle cx="45" cy="35" r="4" fill="#f44336"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 40" stroke="#5d4037" stroke-width="10"/><path d="M50 10 Q20 10 20 40 Q20 70 50 70 Q80 70 80 40 Q80 10 50 10" fill="#27ae60"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 60" stroke="#4a3728" stroke-width="5"/><circle cx="50" cy="30" r="20" fill="#9b59b6" opacity="0.8"/><path d="M50 10 L60 30 L50 50 L40 30 Z" fill="white"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 Q40 50 50 20" stroke="#795548" stroke-width="12" fill="none"/><circle cx="55" cy="25" r="30" fill="#4ade80"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 60" stroke="#5d4037" stroke-width="12"/><circle cx="50" cy="40" r="35" fill="#14532d"/><circle cx="40" cy="30" r="3" fill="#fbbf24"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 50" stroke="#3e2723" stroke-width="14"/><path d="M20 50 L80 50 L50 5 Z" fill="#064e3b"/><circle cx="50" cy="30" r="5" fill="#ef4444"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 40" stroke="#2a1b0d" stroke-width="16"/><circle cx="50" cy="35" r="40" fill="#166534"/><circle cx="50" cy="35" r="20" fill="#15803d"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 70" stroke="#4a3728" stroke-width="4"/><circle cx="50" cy="40" r="30" fill="#ec4899" opacity="0.6"/><circle cx="50" cy="40" r="15" fill="#fbcfe8"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 60" stroke="#4a3728" stroke-width="4"/><path d="M50 10 L90 50 L50 90 L10 50 Z" fill="#6366f1" opacity="0.8"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 50" stroke="#1e293b" stroke-width="10"/><circle cx="50" cy="30" r="25" fill="#1e1b4b"/><circle cx="50" cy="30" r="5" fill="#818cf8"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 40" stroke="#451a03" stroke-width="18"/><circle cx="50" cy="40" r="45" fill="#065f46"/><path d="M50 10 L60 40 L50 70 L40 40 Z" fill="#fbbf24"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 20" stroke="#f59e0b" stroke-width="4"/><circle cx="50" cy="20" r="15" fill="#fef3c7"/><circle cx="50" cy="20" r="5" fill="#f59e0b"/></svg>`,
+            `<svg class="plant-svg" viewBox="0 0 100 100"><path d="M50 90 L50 50" stroke="gold" stroke-width="10"/><circle cx="50" cy="40" r="40" fill="url(#grad1)" opacity="0.9"/><defs><radialGradient id="grad1"><stop offset="0%" stop-color="gold"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs></svg>`
+        ];
+
+        const PLANT_NAMES = ["Graine", "Feuille", "Trèfle", "Tulipe", "Tournesol", "Amanite", "Sapin", "Pommier", "Chêne", "Lotus", "Saule", "Oranger", "Grand Nord", "Baobab", "Cerisier", "Cristal", "Ombre", "Ancien", "Lumière", "Cosmos"];
+
+        let isTrashMode = false;
+        let draggedIndex = null;
+        let boxTime = 10000; 
+        let currentProgress = 0;
+
+        function initGrid() {
+            const gridEl = document.getElementById('grid');
+            gridEl.innerHTML = '';
+            
+            const zoom = state.gridSlots > 12 ? 0.7 : 0.9;
+            gridEl.style.transform = `scale(${zoom}) rotateX(10deg)`;
+            gridEl.style.gridTemplateColumns = state.gridSlots > 12 ? 'repeat(4, 1fr)' : 'repeat(3, 1fr)';
+
+            state.grid.forEach((item, i) => {
+                const cell = document.createElement('div');
+                cell.className = 'cell';
+                cell.dataset.index = i;
+
+                if (item !== null) {
+                    const cont = document.createElement('div');
+                    cont.className = 'plant-container';
+                    cont.innerHTML = PLANT_SVGS[item];
+                    cell.appendChild(cont);
+
+                    if (!isTrashMode) {
+                        cell.draggable = true;
+                        cell.ondragstart = (e) => onStart(i, e);
+                        cell.ontouchstart = (e) => onStart(i, e);
+                    } else {
+                        const del = document.createElement('div');
+                        del.className = "absolute inset-0 bg-red-500/40 rounded-[16px] flex items-center justify-center text-white font-bold";
+                        del.innerText = "✕";
+                        cell.appendChild(del);
+                        cell.onclick = () => { state.grid[i] = null; playSound(150); initGrid(); };
+                    }
+                }
+
+                cell.ondragover = (e) => { e.preventDefault(); cell.classList.add('drag-over'); };
+                cell.ondragleave = () => cell.classList.remove('drag-over');
+                cell.ondrop = () => handleDrop(i);
+                
+                gridEl.appendChild(cell);
+            });
+
+            document.getElementById('slots-count').innerText = state.gridSlots;
+            updateStats();
+            persist();
+        }
+
+        function onStart(index, e) {
+            draggedIndex = index;
+            const ghost = document.getElementById('drag-ghost');
+            ghost.innerHTML = PLANT_SVGS[state.grid[index]];
+            ghost.style.display = 'block';
+
+            if (e.type === 'touchstart') {
+                const touch = e.touches[0];
+                updateGhostPos(touch.clientX, touch.clientY);
+            } else {
+                const img = new Image();
+                img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+                e.dataTransfer.setDragImage(img, 0, 0);
+            }
+        }
+
+        function updateGhostPos(x, y) {
+            const ghost = document.getElementById('drag-ghost');
+            if (draggedIndex === null) {
+                ghost.style.display = 'none';
+                return;
+            }
+            ghost.style.left = (x - 40) + 'px';
+            ghost.style.top = (y - 40) + 'px';
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            if (draggedIndex !== null) updateGhostPos(e.clientX, e.clientY);
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            if (draggedIndex !== null) {
+                e.preventDefault();
+                const touch = e.touches[0];
+                updateGhostPos(touch.clientX, touch.clientY);
+                
+                const target = document.elementFromPoint(touch.clientX, touch.clientY)?.closest('.cell');
+                document.querySelectorAll('.cell').forEach(c => c.classList.remove('drag-over'));
+                if (target) target.classList.add('drag-over');
+            }
+        }, { passive: false });
+
+        document.addEventListener('touchend', (e) => {
+            if (draggedIndex === null) return;
+            const touch = e.changedTouches[0];
+            const target = document.elementFromPoint(touch.clientX, touch.clientY)?.closest('.cell');
+            if (target) {
+                handleDrop(parseInt(target.dataset.index));
+            } else {
+                cleanupDrag();
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (draggedIndex !== null) cleanupDrag();
+        });
+
+        function cleanupDrag() {
+            draggedIndex = null;
+            const ghost = document.getElementById('drag-ghost');
+            ghost.style.display = 'none';
+            ghost.innerHTML = '';
+            document.querySelectorAll('.cell').forEach(c => c.classList.remove('drag-over'));
+        }
+
+        function handleDrop(targetIdx) {
+            if (draggedIndex === null) return;
+            const sourceIdx = draggedIndex;
+            
+            // Toujours nettoyer le drag APRES avoir récupéré les index mais AVANT de modifier l'état
+            // pour éviter que l'image ne reste collée si le DOM se rafraîchit
+            const sourceVal = state.grid[sourceIdx];
+            const targetVal = state.grid[targetIdx];
+
+            if (sourceIdx === targetIdx) {
+                cleanupDrag();
+                return;
+            }
+
+            if (targetVal === null) {
+                state.grid[targetIdx] = sourceVal;
+                state.grid[sourceIdx] = null;
+                playSound(300);
+            } else if (sourceVal === targetVal && sourceVal < 19) {
+                state.grid[targetIdx] = sourceVal + 1;
+                state.grid[sourceIdx] = null;
+                state.xp += (sourceVal + 1) * 50;
+                state.coins += (sourceVal + 1) * 20;
+                if (sourceVal + 1 > state.discoveredLevel) state.discoveredLevel = sourceVal + 1;
+                
+                playSound(600, 'triangle', 0.4);
+                showToast(`Fusion ! ${PLANT_NAMES[sourceVal + 1]} ✨`);
+            }
+            
+            cleanupDrag();
+            initGrid();
+        }
+
+        function spawnPlant() {
+            const emptyIdx = state.grid.map((v, i) => v === null ? i : null).filter(v => v !== null);
+            if (emptyIdx.length > 0) {
+                state.grid[emptyIdx[Math.floor(Math.random() * emptyIdx.length)]] = 0;
+                playSound(400, 'sine', 0.2);
+                initGrid();
+            } else {
+                showToast("Jardin plein !");
+            }
+        }
+
+        function startTimer() {
+            setInterval(() => {
+                currentProgress += 100;
+                if (currentProgress >= boxTime) {
+                    currentProgress = 0;
+                    spawnPlant();
+                }
+                updateBoxUI();
+            }, 100);
+        }
+
+        function clickBox() {
+            currentProgress += 1000;
+            if (currentProgress >= boxTime) {
+                currentProgress = 0;
+                spawnPlant();
+            }
+            updateBoxUI();
+            playSound(200);
+        }
+
+        function updateBoxUI() {
+            const circle = document.getElementById('box-circle');
+            const pct = currentProgress / boxTime;
+            circle.style.strokeDashoffset = 251.32 - (pct * 251.32);
+            document.getElementById('box-timer').innerText = Math.ceil((boxTime - currentProgress)/1000) + "s";
+        }
+
+        function updateStats() {
+            document.getElementById('coins-val').innerText = state.coins;
+            document.getElementById('lvl-txt').innerText = state.level;
+            const threshold = state.level * 500;
+            if (state.xp >= threshold) {
+                state.level++;
+                state.xp -= threshold;
+                state.gridSlots++;
+                state.grid.push(null);
+                showToast(`Niveau ${state.level} ! +1 Place.`);
+            }
+            document.getElementById('xp-bar').style.width = (state.xp / threshold * 100) + "%";
+        }
+
+        function showToast(m) {
+            const t = document.getElementById('toast');
+            t.innerText = m; t.style.opacity = 1; t.style.top = "40px";
+            setTimeout(() => { t.style.opacity = 0; t.style.top = "20px"; }, 2000);
+        }
+
+        function toggleTrash() {
+            isTrashMode = !isTrashMode;
+            document.getElementById('trash-btn').innerHTML = isTrashMode ? '<span class="text-lg block mb-1">✅</span>Fini' : '<span class="text-lg block mb-1">✂️</span>Nettoyer';
+            initGrid();
+        }
+
+        function toggleShop() {
+            const m = document.getElementById('shop-modal');
+            m.style.display = m.style.display === 'flex' ? 'none' : 'flex';
+            if (m.style.display === 'flex') renderShop();
+        }
+
+        function renderShop() {
+            const list = document.getElementById('shop-list');
+            list.innerHTML = '';
+            for (let i = 0; i <= state.discoveredLevel; i++) {
+                if (i > 15) break;
+                const price = Math.floor(Math.pow(i + 2, 3.8) + 50);
+                const item = document.createElement('div');
+                item.className = 'shop-item';
+                item.innerHTML = `
+                    <div class="w-10 h-10 bg-white rounded-lg p-1">${PLANT_SVGS[i]}</div>
+                    <div class="flex-grow font-bold text-xs">${PLANT_NAMES[i]} <br><span class="text-green-600">${price}🪙</span></div>
+                    <button onclick="buy(${i}, ${price})" class="bg-green-500 text-white px-3 py-1 rounded-lg text-[10px] font-bold">ACHETER</button>
+                `;
+                list.appendChild(item);
+            }
+        }
+
+        function buy(id, p) {
+            if (state.coins < p) return showToast("Trop cher !");
+            const empty = state.grid.indexOf(null);
+            if (empty === -1) return showToast("Pas de place !");
+            state.coins -= p;
+            state.grid[empty] = id;
+            initGrid();
+            toggleShop();
+        }
+
+        function updateCycle() {
+            const hour = new Date().getHours();
+            const label = document.getElementById('cycle-label');
+            if (hour >= 6 && hour < 18) { document.body.className = 'day'; label.innerText = "Zénith"; }
+            else if (hour >= 18 && hour < 21) { document.body.className = 'sunset'; label.innerText = "Crépuscule"; }
+            else { document.body.className = 'night'; label.innerText = "Nuit"; }
+        }
+
+        function downloadAndSave() {
+            persist();
+            const html = document.documentElement.outerHTML;
+            const blob = new Blob([html], { type: 'text/html' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'MonJardin_PlantaMerge.html';
+            a.click();
+            showToast("Sauvegardé ! 💾");
+        }
+
+        window.onload = () => {
+            loadSave();
+            updateCycle();
+            initGrid();
+            startTimer();
+            setInterval(updateCycle, 30000);
+        };
+    </script>
+
+</body></html>
